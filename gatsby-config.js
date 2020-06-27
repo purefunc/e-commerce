@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `E-commerce template`,
+    description: `A template for Gatsby and Shopify sites.`,
+    author: `@_purefunc`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,6 +15,21 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    "gatsby-plugin-robots-txt",
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: "gatsby-source-shopify",
+      options: {
+        shopName: process.env.GATSBY_SHOPIFY_STORE_NAME,
+        accessToken: process.env.GATSBY_SHOPIFY_STOREFRONT_TOKEN,
+        // see: https://help.shopify.com/en/api/storefront-api/reference/queryroot
+        // Defaults to 2019-07
+        apiVersion: "2020-04",
+        // Possible values are: 'shop' and 'content'.
+        // Defaults to ['shop', 'content'].
+        includeCollections: ["shop"],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
