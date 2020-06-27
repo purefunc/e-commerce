@@ -13,3 +13,11 @@ export const hasUrlParam = param => {
     return urlParams?.has(param)
   }
 }
+
+export const transformParams = (url: string) => {
+  const idx = url.indexOf("?") + 1
+  const preQuery = url.slice(0, idx)
+  const postQuery = url.slice(idx)
+  const replaced = postQuery.replace(/\?/g, "&")
+  return preQuery + replaced
+}

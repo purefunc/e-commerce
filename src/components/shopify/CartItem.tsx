@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React from "react"
 import styled from "styled-components"
 // import Img from "gatsby-image"
 import { Flex } from "../../styles"
@@ -21,17 +21,13 @@ type Props = {
   lineItem: LineItem
 }
 
-const LineItem = ({ lineItem }: Props) => {
-  const {
-    addVariantToCart,
-    removeLineItemInCart,
-    updateQuantityInCart,
-  } = useCheckout()
+const CartItem = ({ lineItem }: Props) => {
+  const { removeLineItemInCart, updateQuantityInCart } = useCheckout()
 
   const price = `$${(lineItem.quantity * lineItem.variant.price).toFixed(2)}`
 
   return (
-    <CartItem>
+    <Item>
       <div>
         {lineItem.variant.image && (
           <img src={lineItem.variant.image.src} alt={`${lineItem.title}`} />
@@ -76,13 +72,13 @@ const LineItem = ({ lineItem }: Props) => {
           <p>{price}</p>
         </Flex>
       </div>
-    </CartItem>
+    </Item>
   )
 }
 
-export default LineItem
+export default CartItem
 
-const CartItem = styled.div`
+const Item = styled.div`
   background: var(--white);
   border-radius: 3px;
   padding: 1.5rem 1.5rem 0;
