@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import Social from "../components/Social"
 import Nav from "../components/Nav"
-import { Container, Flex, Items } from "../styles/"
+import { Container, Flex, Items } from "../styles"
 import { sizes, media } from "../styles/breakpoints"
 
 type Props = {
@@ -93,7 +93,7 @@ const FooterInner = styled(Flex)`
   margin: auto;
   flex-direction: column;
   align-items: center;
-  ${above.medium`
+  ${media.medium`
     flex-direction: row;
     align-items: flex-start;
   `}

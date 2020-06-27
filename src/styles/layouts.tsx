@@ -45,6 +45,12 @@ export const Container = styled.div`
   padding: var(--topSectionPadding) 0 var(--bottomSectionPadding) 0;
 `
 
+// Anytime you need the standard margin around something.
+// A group of buttons, an image, anything
+export const Items = styled.div`
+  margin: var(--margins);
+`
+
 export const Card = styled.div`
   padding: var(--cardPadding);
   border-radius: var(--cardRadius);
