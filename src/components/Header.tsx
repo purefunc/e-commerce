@@ -44,7 +44,7 @@ const HeaderWrapper = styled.header`
   top: -1px;
   width: 100%;
   height: 110px;
-  background: var(--grey);
+  background: var(--lightGray);
   z-index: var(--headerLevel);
   position: sticky;
 `
@@ -60,9 +60,6 @@ const InnerHeader = styled.div`
   margin: auto;
   display: flex;
   height: 70px;
-  a {
-    color: var(--white);
-  }
   .logo {
     font-size: var(--baseFontSize);
     margin: 0;

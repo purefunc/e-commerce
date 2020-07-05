@@ -55,6 +55,12 @@ export const Card = styled.div`
   padding: var(--cardPadding);
   border-radius: var(--cardRadius);
   background: var(--white);
+  > *:first-child {
+    margin-top: 0;
+  }
+  > *:last-child {
+    margin-bottom: 0;
+  }
 `
 
 // Used anytime we need padding and max width in a layout

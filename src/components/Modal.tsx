@@ -2,6 +2,7 @@ import React, { ReactNode } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import styled from "styled-components"
 import Portal from "./Portal"
+import { Card } from "../styles"
 import { useScrollFreeze } from "../hooks"
 import Icon from "./Icon"
 
@@ -57,7 +58,7 @@ const Modal = ({
               <Icon name="close" color="var(--white)" />
             </CloseButton>
           )}
-          <div style={{ pointerEvents }}>{children}</div>
+          <Card style={{ pointerEvents }}>{children}</Card>
         </Transport>
       </ModalWrapper>
       <Background
@@ -104,11 +105,6 @@ const Background = styled.div`
   left: 0;
   width: 100vw;
   pointer-events: all;
-  background: linear-gradient(
-    142.24deg,
-    rgba(0, 40, 58, 0.6) 3.62%,
-    rgba(0, 167, 225, 0.6) 100%
-  );
   width: 100vw;
   height: 100vh;
   z-index: 99;

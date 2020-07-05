@@ -16,6 +16,8 @@ const Layout: FC = ({ children }) => {
       site {
         siteMetadata {
           title
+          facebook
+          twitter
         }
       }
     }

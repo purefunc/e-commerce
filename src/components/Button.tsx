@@ -5,7 +5,7 @@ import styled, { css } from "styled-components"
 const baseButton = css`
   display: inline-block;
   text-align: center;
-  background: var(--blue-600);
+  background: var(--primaryColor);
   color: var(--white);
   font-weight: bold;
   border-radius: var(--buttonRadius);
@@ -15,7 +15,8 @@ const baseButton = css`
   padding: 1.2rem 2.5rem;
   transition: 0.3s ease all;
   &:hover {
-    background: var(--blue-700);
+    background: var(--primaryColor);
+    color: var(--white);
     box-shadow: var(--elevation-2);
     transform: translate3d(0, -1px, 0);
   }

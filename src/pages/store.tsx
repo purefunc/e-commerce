@@ -4,19 +4,21 @@ import { PageProps, graphql } from "gatsby"
 import SEO from "../components/Seo"
 import ProductPreview from "../components/Shopify/ProductPreview"
 import { Grid } from "../styles"
-import { Container } from "../styles"
+import { Container, Wrapper } from "../styles"
 
 const StorePage: FC = ({ data, path }) => (
   <>
     <SEO title="Store" />
-    <Container>
-      <h1>Store Page</h1>
-      <Grid cols={[1, 2, 3, 4]}>
-        {FAKE_PRODUCTS.map(product => (
-          <ProductPreview key={product.title} product={product} />
-        ))}
-      </Grid>
-    </Container>
+    <Wrapper>
+      <Container>
+        <h1>Store Page</h1>
+        <Grid cols={[1, 2, 3, 4]}>
+          {FAKE_PRODUCTS.map(product => (
+            <ProductPreview key={product.title} product={product} />
+          ))}
+        </Grid>
+      </Container>
+    </Wrapper>
   </>
 )
 

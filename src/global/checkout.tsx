@@ -82,10 +82,12 @@ export const CheckoutProvider: FC = ({ children }) => {
 
   const closeCart = () => {
     setIsCartOpen(false)
+    console.log("CLOSe", isCartOpen)
   }
 
   const openCart = () => {
     setIsCartOpen(true)
+    console.log("OPEN", isCartOpen)
   }
 
   const addVariantToCart = async ({

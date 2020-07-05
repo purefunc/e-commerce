@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { Button } from "../Button"
-import VariantSelector from "./VariantSelector"
+// import VariantSelector from "./VariantSelector"
 import { useCheckout } from "../../global"
 // TODO: Either update variant selector or look at buy button logic on e-biz template
 type Option = {
@@ -28,23 +28,27 @@ type Product = {
 type Props = {
   product: Product
 }
+
 const ProductPreview = ({ product }: Props) => {
-  const [selectedVariant, setSelectedVariant] = useState(product.variants[0])
+  // const [selectedVariant, setSelectedVariant] = useState(product.variants[0])
   const { addVariantToCart } = useCheckout()
+
+  const addToCart = () => {
+    // addVariantToCart(selectedVariant.shopifyId, 1)
+  }
+
   return (
     <ProductPreviewWrapper>
       <Link to="/product">
         <div>PRODUCT IMAGE HERE</div>
         <h2 css="color: var(--primaryColor)">{product.title}</h2>
       </Link>
-      <VariantSelector
+      {/* <VariantSelector
         variants={product.variants}
         setSelectedVariant={setSelectedVariant}
         selectedVariant={selectedVariant}
-      />
-      <Button onClick={() => addVariantToCart(selectedVariant.shopifyId, 1)}>
-        Add to Cart
-      </Button>
+      /> */}
+      <Button onClick={addToCart}>Add to Cart</Button>
     </ProductPreviewWrapper>
   )
 }

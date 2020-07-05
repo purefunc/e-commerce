@@ -74,7 +74,7 @@ const Footer: FC = ({ siteTitle, facebook = "", twitter = "" }: Props) => (
 
 const FooterLayout = styled(Container)`
   padding-top: var(--basePadding);
-  background: var(--dark-grey);
+  background: var(--darkGray);
   color: var(--white);
   a {
     color: var(--white);
@@ -92,6 +92,7 @@ const FooterInner = styled(Flex)`
   max-width: ${sizes.xLarge / 16}em;
   margin: auto;
   flex-direction: column;
+  padding: 0 var(--basePadding);
   align-items: center;
   ${media.medium`
     flex-direction: row;

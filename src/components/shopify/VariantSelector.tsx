@@ -11,8 +11,8 @@ type Props = {
   option: Option
   handleOptionChange: () => void
 }
-// TODO: Either update for variants like rachio or update ProductPreview/Buy Button
-const VariantSelector = ({ option, handleOptionChange, value }: Props) => {
+
+const VariantSelector = ({ option, handleOptionChange }: Props) => {
   return (
     <label htmlFor={option.name}>
       <span>{option.name}</span>
