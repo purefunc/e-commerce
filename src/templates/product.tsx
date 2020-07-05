@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
-// import SEO from "~/components/seo"
+// import SEO from "~/components/Seo"
 // import ProductForm from "~/components/ProductForm"
 // import {
 //   Img,

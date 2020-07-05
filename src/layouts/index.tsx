@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { ContextProvider } from "../global/state"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import Cart from "../components/Cart"
+import Cart from "../components/Shopify/Cart"
 
 import "../styles/vars.css"
 import "../styles/reset.css"

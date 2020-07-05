@@ -1,28 +1,26 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
-import SEO from "../components/SEO"
+import SEO from "../components/Seo"
 import { Wrapper } from "../styles"
 
 const LegalTemplate = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+  // const { markdownRemark } = data
+  // const { frontmatter, html } = markdownRemark
   return (
     <>
-      <SEO
-        title={frontmatter.seoTitle}
-        description={frontmatter.seoDescription}
-      />
+      <div>hi</div>
+      {/* <SEO title={frontmatter.title} description={frontmatter.description} />
       <Wrapper width="tight">
         <div className="top-padding center-text">
-          <h1>{frontmatter.h1}</h1>
+          <h1>{frontmatter.title}</h1>
           <hr className="top-padding" />
         </div>
         <LegalMarkdown
           className="container"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-      </Wrapper>
+      </Wrapper> */}
     </>
   )
 }
@@ -49,16 +47,15 @@ const LegalMarkdown = styled.div`
   }
 `
 
-export const legalTemplateQuery = graphql`
-  query LegalTemplate($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        h1
-        slug
-        seoTitle
-        seoDescription
-      }
-    }
-  }
-`
+// export const legalTemplateQuery = graphql`
+//   query LegalTemplate($slug: String!) {
+//     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+//       html
+//       frontmatter {
+//         slug
+//         title
+//         description
+//       }
+//     }
+//   }
+// `

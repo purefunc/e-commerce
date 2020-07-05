@@ -2,17 +2,11 @@
 import React, { FC } from "react"
 import { PageProps, graphql } from "gatsby"
 import SEO from "../components/Seo"
-import ProductPreview from "../components/ProductPreview"
+import ProductPreview from "../components/Shopify/ProductPreview"
 import { Grid } from "../styles"
 import { Container } from "../styles"
 
-type DataProps = {
-  site: {
-    buildTime: string
-  }
-}
-
-const StorePage: FC<PageProps<DataProps>> = ({ data, path }) => (
+const StorePage: FC = ({ data, path }) => (
   <>
     <SEO title="Store" />
     <Container>
@@ -54,11 +48,3 @@ const FAKE_PRODUCT = {
 }
 
 const FAKE_PRODUCTS = [FAKE_PRODUCT, FAKE_PRODUCT, FAKE_PRODUCT, FAKE_PRODUCT]
-
-export const query = graphql`
-  {
-    site {
-      buildTime(formatString: "YYYY-MM-DD hh:mm a z")
-    }
-  }
-`

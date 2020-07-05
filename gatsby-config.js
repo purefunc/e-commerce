@@ -13,24 +13,33 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `legal`,
+        path: `${__dirname}/src/legal`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
     "gatsby-plugin-robots-txt",
     `gatsby-plugin-styled-components`,
-    {
-      resolve: "gatsby-source-shopify",
-      options: {
-        shopName: process.env.GATSBY_SHOPIFY_STORE_NAME,
-        accessToken: process.env.GATSBY_SHOPIFY_STOREFRONT_TOKEN,
-        // see: https://help.shopify.com/en/api/storefront-api/reference/queryroot
-        // Defaults to 2019-07
-        apiVersion: "2020-04",
-        // Possible values are: 'shop' and 'content'.
-        // Defaults to ['shop', 'content'].
-        includeCollections: ["shop"],
-      },
-    },
+    `gatsby-plugin-layout`,
+
+    // {
+    //   resolve: "gatsby-source-shopify",
+    //   options: {
+    //     shopName: process.env.SHOP_NAME,
+    //     accessToken: process.env.SHOPIFY_ACCESS_TOKEN,
+    //     // see: https://help.shopify.com/en/api/storefront-api/reference/queryroot
+    //     // Defaults to 2019-07
+    //     apiVersion: "2020-04",
+    //     // Possible values are: 'shop' and 'content'.
+    //     // Defaults to ['shop', 'content'].
+    //     includeCollections: ["shop"],
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

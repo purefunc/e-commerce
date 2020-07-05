@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { useCheckout } from "../../../global"
+import { useCheckout } from "../../global"
 import Icon from "../Icon"
 
 const CartIcon = () => {
